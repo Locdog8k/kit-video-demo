@@ -1,0 +1,585 @@
+{
+ "name": "Mire",
+ "version": 3,
+ "color": {
+  "themes": [
+   {
+    "id": "light",
+    "name": "Clair"
+   },
+   {
+    "id": "dark",
+    "name": "Sombre"
+   }
+  ],
+  "tokens": [
+   {
+    "name": "jaune",
+    "value": {
+     "light": "#f5b800",
+     "dark": "#f5b800"
+    },
+    "usage": "Jaune engin : couleur signature. Carré du symbole, point du i sur fond sombre, indicateur actif, aplats de marque. Ne se pose QUE sur du sombre (asphalte, ink) ou porte du texte ink (9,9:1). Jamais de texte jaune sur fond clair (1,8:1), jamais de texte blanc sur jaune."
+   },
+   {
+    "name": "asphalte",
+    "value": {
+     "light": "#1c1f23",
+     "dark": "#1c1f23"
+    },
+    "usage": "Gris asphalte : tuile du symbole, barre latérale, en-têtes d'email, icône d'installation. Identique dans les deux thèmes."
+   },
+   {
+    "name": "craie",
+    "value": {
+     "light": "#f4f3ef",
+     "dark": "#f4f3ef"
+    },
+    "usage": "Blanc craie : fond des supports imprimés et du logo carré clair."
+   },
+   {
+    "name": "action",
+    "value": {
+     "light": "#1c1f23",
+     "dark": "#f5b800"
+    },
+    "usage": "Boutons principaux, liens, élément sélectionné. Clair : asphalte, texte on-action blanc (16,5:1). Sombre : jaune, texte on-action ink (9,9:1)."
+   },
+   {
+    "name": "action-hover",
+    "value": {
+     "light": "#33383e",
+     "dark": "#ffcb33"
+    },
+    "usage": "Survol et appui des boutons action (texte on-action : 11,8:1 / 11,7:1)."
+   },
+   {
+    "name": "on-action",
+    "value": {
+     "light": "#ffffff",
+     "dark": "#16181b"
+    },
+    "usage": "Texte et icônes posés sur action et action-hover."
+   },
+   {
+    "name": "action-soft",
+    "value": {
+     "light": "#ffe9a3",
+     "dark": "#3a2e05"
+    },
+    "usage": "Fond d'un choix sélectionné (étiquette photo, onglet actif). Texte ink en clair (14,8:1), texte jaune en sombre (7,5:1)."
+   },
+   {
+    "name": "on-action-soft",
+    "value": {
+     "light": "#16181b",
+     "dark": "#f5b800"
+    },
+    "usage": "Texte et icône posés sur action-soft."
+   },
+   {
+    "name": "surface-page",
+    "value": {
+     "light": "#f4f3ef",
+     "dark": "#121417"
+    },
+    "usage": "Fond de page de l'application et du site."
+   },
+   {
+    "name": "surface",
+    "value": {
+     "light": "#ffffff",
+     "dark": "#1a1d21"
+    },
+    "usage": "Cartes, gros boutons de saisie, panneaux, champs."
+   },
+   {
+    "name": "surface-sunken",
+    "value": {
+     "light": "#eae8e2",
+     "dark": "#23272c"
+    },
+    "usage": "Zones en retrait : barre d'outils, ligne de tableau survolée, fond de galerie."
+   },
+   {
+    "name": "surface-inverse",
+    "value": {
+     "light": "#1c1f23",
+     "dark": "#f1efea"
+    },
+    "usage": "Bandeaux à fort contraste (barre hors-ligne, toast). Texte on-inverse dessus."
+   },
+   {
+    "name": "on-inverse",
+    "value": {
+     "light": "#f1efea",
+     "dark": "#16181b"
+    },
+    "usage": "Texte sur surface-inverse."
+   },
+   {
+    "name": "ink",
+    "value": {
+     "light": "#16181b",
+     "dark": "#f1efea"
+    },
+    "usage": "Texte principal et titres, sur surface-page, surface et surface-sunken (≥ 14:1 dans les deux thèmes)."
+   },
+   {
+    "name": "ink-muted",
+    "value": {
+     "light": "#575c63",
+     "dark": "#a9aeb5"
+    },
+    "usage": "Texte secondaire : dates, auteurs, métadonnées, sur surface-page et surface (≥ 6:1 en clair, ≥ 7,5:1 en sombre)."
+   },
+   {
+    "name": "ink-placeholder",
+    "value": {
+     "light": "#676c74",
+     "dark": "#8f959d"
+    },
+    "usage": "Texte d'exemple dans les champs, sur surface uniquement (5,3:1 en clair)."
+   },
+   {
+    "name": "line",
+    "value": {
+     "light": "#dad7cf",
+     "dark": "#2e3338"
+    },
+    "usage": "Filets de séparation décoratifs entre lignes et cartes. Ne porte aucun sens."
+   },
+   {
+    "name": "line-strong",
+    "value": {
+     "light": "#80858c",
+     "dark": "#6c727a"
+    },
+    "usage": "Bordure des champs, cases et boutons secondaires (≥ 3:1 sur surface-page et surface)."
+   },
+   {
+    "name": "focus",
+    "value": {
+     "light": "#1f5aa6",
+     "dark": "#79a7ff"
+    },
+    "usage": "Anneau de focus clavier : 3 px plein, décalé de 2 px (≥ 6:1 sur toutes les surfaces)."
+   },
+   {
+    "name": "danger",
+    "value": {
+     "light": "#c0262d",
+     "dark": "#ff6b66"
+    },
+    "usage": "Anomalie, endommagement, document expiré : texte, icône et bordure, toujours avec icône alerte et un libellé. Sur surface et danger-soft."
+   },
+   {
+    "name": "danger-soft",
+    "value": {
+     "light": "#fdecec",
+     "dark": "#3a1517"
+    },
+    "usage": "Fond des bandeaux et cartes d'alerte anomalie. Texte danger ou ink dessus."
+   },
+   {
+    "name": "warning",
+    "value": {
+     "light": "#b54708",
+     "dark": "#ff9f5a"
+    },
+    "usage": "Échéance proche (moins de 15 jours) : texte et icône échéance, orange pour rester distinct du jaune de marque. Sur surface, surface-page et warning-soft (≥ 4,7:1 / ≥ 7,6:1)."
+   },
+   {
+    "name": "warning-soft",
+    "value": {
+     "light": "#ffedd5",
+     "dark": "#3a1d0a"
+    },
+    "usage": "Fond des rappels d'échéance."
+   },
+   {
+    "name": "success",
+    "value": {
+     "light": "#0b6b66",
+     "dark": "#3fc1b4"
+    },
+    "usage": "Synchronisé, document valide, rapport envoyé. Bleu-vert pour rester distinct du danger sans dépendre du rouge/vert ; toujours avec icône."
+   },
+   {
+    "name": "success-soft",
+    "value": {
+     "light": "#e3f3f1",
+     "dark": "#102e2b"
+    },
+    "usage": "Fond des confirmations."
+   },
+   {
+    "name": "info",
+    "value": {
+     "light": "#1f5aa6",
+     "dark": "#79a7ff"
+    },
+    "usage": "Information neutre, transcription en cours, conseils."
+   },
+   {
+    "name": "info-soft",
+    "value": {
+     "light": "#e8effa",
+     "dark": "#16233a"
+    },
+    "usage": "Fond des messages d'information."
+   },
+   {
+    "name": "reseau-eau",
+    "value": {
+     "light": "#1f5fbf",
+     "dark": "#1f5fbf"
+    },
+    "usage": "Pastille du réseau eau potable (code couleur réglementaire). Toujours avec le libellé ; texte blanc dessus 6,1:1."
+   },
+   {
+    "name": "reseau-assainissement",
+    "value": {
+     "light": "#7a4a22",
+     "dark": "#7a4a22"
+    },
+    "usage": "Pastille eaux usées et eaux pluviales (marron). Texte blanc dessus 7,4:1."
+   },
+   {
+    "name": "reseau-gaz",
+    "value": {
+     "light": "#e0a800",
+     "dark": "#e0a800"
+    },
+    "usage": "Pastille gaz et hydrocarbures (jaune réglementaire, plus chaud que le jaune de marque). Texte ink dessus, jamais blanc. Uniquement dans une pastille avec son libellé."
+   },
+   {
+    "name": "reseau-electricite",
+    "value": {
+     "light": "#d42020",
+     "dark": "#d42020"
+    },
+    "usage": "Pastille électricité et éclairage public (rouge). Texte blanc dessus 5,2:1. Ne pas confondre avec danger : la pastille a toujours son libellé."
+   },
+   {
+    "name": "reseau-telecom",
+    "value": {
+     "light": "#2e7d38",
+     "dark": "#2e7d38"
+    },
+    "usage": "Pastille télécom / fibre (vert). Texte blanc dessus 5,1:1."
+   },
+   {
+    "name": "reseau-chauffage",
+    "value": {
+     "light": "#7b3fa0",
+     "dark": "#7b3fa0"
+    },
+    "usage": "Pastille chauffage et climatisation (violet). Texte blanc dessus 6,9:1."
+   }
+  ]
+ },
+ "type": {
+  "families": {
+   "display": "\"Archivo\", \"Arial Narrow\", system-ui, sans-serif",
+   "text": "\"Atkinson Hyperlegible Next\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+   "mono": "\"Atkinson Hyperlegible Mono\", ui-monospace, \"SF Mono\", Consolas, monospace"
+  },
+  "fonts": [],
+  "groups": [
+   {
+    "name": "Titres",
+    "family": "display",
+    "styles": [
+     {
+      "name": "display-pc",
+      "fontSize": "64px",
+      "lineHeight": "68px",
+      "fontWeight": 800,
+      "letterSpacing": "-0.01em",
+      "sample": "Chaque tranchée documentée.",
+      "usage": "Titre d'accroche du site, PC (≥ 1024 px)."
+     },
+     {
+      "name": "display-mobile",
+      "fontSize": "40px",
+      "lineHeight": "44px",
+      "fontWeight": 800,
+      "letterSpacing": "-0.01em",
+      "sample": "Chaque tranchée documentée.",
+      "usage": "Titre d'accroche du site, mobile."
+     },
+     {
+      "name": "h1-pc",
+      "fontSize": "36px",
+      "lineHeight": "40px",
+      "fontWeight": 800,
+      "sample": "Rue des Lilas — AEP",
+      "usage": "Titre de page PC (nom du chantier, tableau de bord)."
+     },
+     {
+      "name": "h1-mobile",
+      "fontSize": "28px",
+      "lineHeight": "32px",
+      "fontWeight": 800,
+      "sample": "Rue des Lilas — AEP",
+      "usage": "Titre de page mobile."
+     },
+     {
+      "name": "h2-pc",
+      "fontSize": "28px",
+      "lineHeight": "34px",
+      "fontWeight": 700,
+      "sample": "Alertes du jour",
+      "usage": "Titre de section PC."
+     },
+     {
+      "name": "h2-mobile",
+      "fontSize": "22px",
+      "lineHeight": "28px",
+      "fontWeight": 700,
+      "sample": "Alertes du jour",
+      "usage": "Titre de section mobile."
+     },
+     {
+      "name": "h3-pc",
+      "fontSize": "20px",
+      "lineHeight": "26px",
+      "fontWeight": 700,
+      "sample": "Récépissé GRDF",
+      "usage": "Titre de carte PC."
+     },
+     {
+      "name": "h3-mobile",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "fontWeight": 700,
+      "sample": "Récépissé GRDF",
+      "usage": "Titre de carte mobile."
+     }
+    ]
+   },
+   {
+    "name": "Texte",
+    "family": "text",
+    "styles": [
+     {
+      "name": "body-terrain",
+      "fontSize": "18px",
+      "lineHeight": "28px",
+      "fontWeight": 400,
+      "sample": "Photo enregistrée. Elle partira dès le retour du réseau.",
+      "usage": "Texte courant de l'appli sur téléphone (chef de chantier, plein soleil)."
+     },
+     {
+      "name": "body",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": 400,
+      "sample": "Le récépissé expire dans 6 jours.",
+      "usage": "Texte courant sur PC et sur le site. Taille minimale de tout texte de lecture."
+     },
+     {
+      "name": "body-strong",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": 700,
+      "sample": "Réseau non répertorié",
+      "usage": "Mise en avant dans une ligne de texte."
+     },
+     {
+      "name": "small",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": 400,
+      "sample": "Ajouté par J. Martin · 10:42",
+      "usage": "Métadonnées sur PC uniquement (dates, auteurs). Jamais sous 14 px ; sur téléphone, utiliser body."
+     },
+     {
+      "name": "button-terrain",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "fontWeight": 700,
+      "sample": "Prendre une photo",
+      "usage": "Libellé des gros boutons terrain (64 px de haut)."
+     },
+     {
+      "name": "button",
+      "fontSize": "16px",
+      "lineHeight": "20px",
+      "fontWeight": 700,
+      "sample": "Générer le rapport",
+      "usage": "Libellé des boutons PC (48 px de haut)."
+     },
+     {
+      "name": "label",
+      "fontSize": "14px",
+      "lineHeight": "18px",
+      "fontWeight": 700,
+      "letterSpacing": "0.04em",
+      "sample": "AVANT REMBLAIEMENT",
+      "usage": "Étiquettes photo, types de document, pastilles réseau. En capitales."
+     }
+    ]
+   },
+   {
+    "name": "Données",
+    "family": "mono",
+    "styles": [
+     {
+      "name": "data",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": 500,
+      "sample": "PEHD · Ø160 mm · prof. 1,20 m",
+      "usage": "Relevés extraits (matériau, diamètre, profondeur), références de DICT, dates d'échéance."
+     },
+     {
+      "name": "data-large",
+      "fontSize": "28px",
+      "lineHeight": "32px",
+      "fontWeight": 700,
+      "sample": "3 alertes",
+      "usage": "Chiffres clés du tableau de bord."
+     }
+    ]
+   }
+  ]
+ },
+ "spacing": {
+  "tokens": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Écart icône–texte dans une pastille."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Écart entre éléments liés (titre et métadonnée)."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Écart entre les 4 gros boutons terrain."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Marge latérale mobile, rembourrage des cartes."
+   },
+   {
+    "name": "space-6",
+    "value": "24px",
+    "usage": "Rembourrage des cartes PC, écart entre sections mobiles."
+   },
+   {
+    "name": "space-8",
+    "value": "32px",
+    "usage": "Écart entre sections PC."
+   },
+   {
+    "name": "space-12",
+    "value": "48px",
+    "usage": "Respiration des sections du site."
+   },
+   {
+    "name": "space-16",
+    "value": "64px",
+    "usage": "Grandes sections du site et du rapport PDF."
+   }
+  ]
+ },
+ "radius": {
+  "tokens": [
+   {
+    "name": "radius-sm",
+    "value": "6px",
+    "usage": "Pastilles, étiquettes, cases à cocher."
+   },
+   {
+    "name": "radius-md",
+    "value": "10px",
+    "usage": "Boutons, champs, vignettes photo."
+   },
+   {
+    "name": "radius-lg",
+    "value": "16px",
+    "usage": "Cartes et gros boutons terrain."
+   },
+   {
+    "name": "radius-full",
+    "value": "999px",
+    "usage": "Indicateurs ronds (point de synchronisation), avatars."
+   }
+  ]
+ },
+ "size": {
+  "note": "Zones tactiles et épaisseurs.",
+  "tokens": [
+   {
+    "name": "tap-terrain",
+    "value": "64px",
+    "usage": "Hauteur minimale des boutons utilisés avec des gants (appli chef de chantier)."
+   },
+   {
+    "name": "tap-min",
+    "value": "48px",
+    "usage": "Hauteur minimale de toute cible tactile ou bouton PC."
+   },
+   {
+    "name": "tile-terrain",
+    "value": "112px",
+    "usage": "Hauteur des 4 gros boutons de l'écran chantier."
+   },
+   {
+    "name": "icon-terrain",
+    "value": "32px",
+    "usage": "Icônes des gros boutons terrain."
+   },
+   {
+    "name": "icon-ui",
+    "value": "24px",
+    "usage": "Icônes d'interface standard."
+   },
+   {
+    "name": "stroke-hair",
+    "value": "1px",
+    "usage": "Filets décoratifs (couleur line)."
+   },
+   {
+    "name": "stroke-control",
+    "value": "2px",
+    "usage": "Bordure des champs et boutons secondaires (couleur line-strong)."
+   },
+   {
+    "name": "stroke-focus",
+    "value": "3px",
+    "usage": "Anneau de focus (couleur focus), décalé de 2 px."
+   }
+  ]
+ },
+ "shadow": {
+  "tokens": [
+   {
+    "name": "shadow-card",
+    "value": {
+     "light": "0 1px 2px rgba(22,24,27,0.08), 0 2px 6px rgba(22,24,27,0.06)",
+     "dark": "none"
+    },
+    "usage": "Cartes et gros boutons. En sombre, la séparation se fait par surface, pas par ombre."
+   },
+   {
+    "name": "shadow-raised",
+    "value": {
+     "light": "0 8px 24px rgba(22,24,27,0.14)",
+     "dark": "0 8px 24px rgba(0,0,0,0.5)"
+    },
+    "usage": "Feuille du bas (choix d'étiquette), menus, toasts."
+   }
+  ]
+ },
+ "meta": {
+  "source": "Charte Mire v3, novembre 2026"
+ }
+}
